@@ -32,4 +32,13 @@ public class CustomListTest {
             list.deleteCity(vancouver);
         });
     }
+
+    @Test
+    public void testCountCities() {
+        CustomList list = new CustomList();
+        assertEquals(0, list.countCities());
+
+        list.addCity(new City("Tokyo", "JP"));
+        assertEquals(1, list.countCities());
+    }
 }
